@@ -1,30 +1,5 @@
 ## Hice este repo para que no se les complique tanto y tener que modificar el código como le sucedió al profesor durante la clase. 
 
-### 3. Configuración de Cucumber
-
-cucumber.json:
-```
-json
-{
-  "default": {
-    "format": ["progress", "html:cucumber-report.html"],
-    "require": ["features/step_definitions/*.js"],
-    "requireModule": ["@babel/register"]
-  }
-}
-```
-package.json (agregar scripts):
-```
-json
-{
-  "scripts": {
-    "test": "cucumber-js",
-    "test:html": "cucumber-js --format html:cucumber-report.html"
-  }
-}
-```
-
-
 * Como sucedió en clase, cuando ejecutemos el test dará error debido a que requiere del módulo ```@babel/register```; para ello el siguiente comando:
 ```
 npm install --save-dev @babel/register @babel/core @babel/preset-env
